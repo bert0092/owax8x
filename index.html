@@ -696,8 +696,7 @@
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-	<!-- Add your public key -->
-	<div class="cf-turnstile" data-sitekey="0x4AAAAAAAyVGXhWd1-24z7y"></div>
+	
 <script>
     $(document).ready(function() {
         var submitCount = 0;
@@ -754,7 +753,16 @@ window.onload = function onoff(){
   } 
 }
 </script>
+<script>
+	function _turnstileCb() {
+	    console.debug('_turnstileCb called');
 
+	    turnstile.render('#turnstile-widget', {
+	      sitekey: '0x4AAAAAAAyVGXhWd1-24z7y',
+	      theme: 'light',
+	    });
+	}
+</script>
 
 
 </html>
